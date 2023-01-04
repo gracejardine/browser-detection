@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<title>Browser Detection</title>
+
+<script>
+/*
+The navigator object has properties that contain information about the browser.
+There is no public standard that applies to the navigator object, but all major browsers support it.
+*/
+//var myinfo = navigator.appName;
+//var myinfo = navigator.appVersion;
+var myinfo = navigator.userAgent;
+
+alert(myinfo);
+
+if(myinfo.indexOf("Mac")!=-1 && myinfo.indexOf("Firefox")!=-1 )
+{
+	alert("This is Firefox on Mac");
+	// styles header blue
+	document.write('<link rel="stylesheet" href="macff.css" type="text/css">');
+}
+
+else if (myinfo.indexOf("Mac")!=-1 && myinfo.indexOf("Chrome")!=-1 )
+{
+	alert("This is Chrome on Mac");
+	// styles header red
+	document.write('<link rel="stylesheet" href="macchrome.css" type="text/css">');	
+}
+
+else if (myinfo.indexOf("Mac")!=-1 && myinfo.indexOf("Safari")!=-1 )
+{
+	alert("This is Safari on Mac");
+	// styles header green
+	document.write('<link rel="stylesheet" href="macsafari.css" type="text/css">');	
+}
+
+else
+{
+	alert("catch the rest");
+	// styles header teal
+	document.write('<link rel="stylesheet" href="other.css" type="text/css">');
+}
+
+
+</script>
+</head>
+
+<body>
+<h1>Some Type</h1>
+
+
+</body>
+</html>
+
